@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "/home/lab661/Documents/Nicolas/Digital-electronics-1/Labs/05-counter_binary/binary_counter/tbcnt_isim_beh.exe" -prj "/home/lab661/Documents/Nicolas/Digital-electronics-1/Labs/05-counter_binary/binary_counter/tbcnt_beh.prj" "work.tbcnt" 
