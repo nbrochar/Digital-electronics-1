@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "/home/nico/Documents/VUT/Digital-electronics-1/Labs/06-display_driver/display_driver/tb_display_driver_isim_beh.exe" -prj "/home/nico/Documents/VUT/Digital-electronics-1/Labs/06-display_driver/display_driver/tb_display_driver_beh.prj" "work.tb_display_driver" 

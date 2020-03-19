@@ -56,7 +56,7 @@ begin
 				data1_i => s_data1,
 				data2_i => s_data2, 
 				data3_i => s_data3,
-				dp_i =>    
+				dp_i => "1011",   
     
 				dp_o => disp_dp,                        
 				seg_o => disp_seg_o,   

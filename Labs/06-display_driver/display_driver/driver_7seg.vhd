@@ -89,29 +89,25 @@ begin
     begin
         case s_cnt is
         when "00" =>
-            dig_o(3) <= '0';
-				dig_o(2) <= '1';
-				dig_o(1) <= '1';
-				dig_o(0) <= '1';
-				dp_o <= '1';
+            -- WRITE YOUR CODE HERE
+            s_hex <= data0_i;
+            dp_o   <= dp_i(0);
+            dig_o  <= "1110";
         when "01" =>
-            dig_o(3) <= '1';
-				dig_o(2) <= '0';
-				dig_o(1) <= '1';
-				dig_o(0) <= '1';
-				dp_o <= '0';
+            -- WRITE YOUR CODE HERE
+            s_hex <= data1_i;
+            dp_o   <= dp_i(1);
+            dig_o  <= "1101";
         when "10" =>
-            dig_o(3) <= '1';
-				dig_o(2) <= '1';
-				dig_o(1) <= '0';
-				dig_o(0) <= '1';
-				dp_o <= '1';
+            -- WRITE YOUR CODE HERE
+            s_hex <= data2_i;
+            dp_o   <= dp_i(2);
+            dig_o  <= "1011";
         when others =>
-            dig_o(3) <= '1';
-				dig_o(2) <= '1';
-				dig_o(1) <= '1';
-				dig_o(0) <= '0';
-				dp_o <= '1';
+            -- WRITE YOUR CODE HERE
+            s_hex <= data3_i;
+            dp_o   <= dp_i(3);
+            dig_o  <= "0111";
         end case;
     end process p_mux;
 

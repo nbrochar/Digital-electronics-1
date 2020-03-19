@@ -1,7 +1,0 @@
-EN hex_to_7seg NULL /home/nico/Documents/VUT/Digital-electronics-1/Labs/06-display_driver/display_driver/hex_to_7seg.vhd sub00/vhpl03 1584650235
-EN driver_7seg NULL /home/nico/Documents/VUT/Digital-electronics-1/Labs/06-display_driver/display_driver/driver_7seg.vhd sub00/vhpl02 1584650237
-EN top NULL /home/nico/Documents/VUT/Digital-electronics-1/Labs/06-display_driver/display_driver/top.vhd sub00/vhpl06 1584650239
-AR driver_7seg behavioral /home/nico/Documents/VUT/Digital-electronics-1/Labs/06-display_driver/display_driver/driver_7seg.vhd sub00/vhpl05 1584650238
-AR clock_enable behavioral /home/nico/Documents/VUT/Digital-electronics-1/Labs/06-display_driver/display_driver/clock_enable.vhd sub00/vhpl01 1584650234
-AR hex_to_7seg behavioral /home/nico/Documents/VUT/Digital-electronics-1/Labs/06-display_driver/display_driver/hex_to_7seg.vhd sub00/vhpl04 1584650236
-EN clock_enable NULL /home/nico/Documents/VUT/Digital-electronics-1/Labs/06-display_driver/display_driver/clock_enable.vhd sub00/vhpl00 1584650233
