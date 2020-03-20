@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2020-03-20T13:43:42</DateModified>
+  <DateModified>2020-03-20T15:08:35</DateModified>
   <ModuleName>top</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
   <SavedFilePath>/home/nico/Documents/VUT/Digital-electronics-1/Labs/07-stopwatch/stopwatch/iseconfig/top.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/home/nico/Documents/VUT/Digital-electronics-1/Labs/07-stopwatch/stopwatch</ImplementationReportsDirectory>
+  <ImplementationReportsDirectory>/home/nico/Documents/VUT/Digital-electronics-1/Labs/07-stopwatch/stopwatch/</ImplementationReportsDirectory>
   <DateInitialized>2020-03-20T13:43:23</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

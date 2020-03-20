@@ -62,7 +62,7 @@ ARCHITECTURE behavior OF tb_top IS
    signal disp_dig_o : std_logic_vector(3 downto 0);
 
    -- Clock period definitions
-   constant clk_i_period : time := 100 us;
+   constant clk_i_period : time := 100 us; -- 10 kHz clock signal 
  
 BEGIN
  
@@ -95,8 +95,13 @@ BEGIN
       wait for clk_i_period*10;
 
       -- insert stimulus here 
-		BTN0 <= '1';
-		BTN1 <= '1';
+		BTN0 <= '1';   -- no reset 
+		BTN1 <= '1';	-- stopwtach enabled
+		
+		wait for 20000 ms;	
+		BTN0 <= '0';   -- reset 
+		wait for 1000 ms;	
+		BTN0 <= '1';   -- end of reset 
 
       wait;
    end process;

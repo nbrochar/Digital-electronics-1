@@ -66,7 +66,7 @@ ARCHITECTURE behavior OF tp_stopwatch IS
    signal hth_l_o : std_logic_vector(3 downto 0);
 
    -- Clock period definitions
-   constant clk_i_period : time := 10 ms;
+   constant clk_i_period : time := 10 ms; -- Simulation of clock enable at 100 Hz
  
 BEGIN
  
@@ -101,9 +101,19 @@ BEGIN
       wait for clk_i_period*10;
 
       -- insert stimulus here 
-		srst_n_i <= '1';
-		ce_100Hz_i <= '1';
-		cnt_en_i <= '1';
+		srst_n_i <= '1'; 
+		ce_100Hz_i <= '1';  -- Stay at '1', the 100 Hz clock will be managed by the simulation clock
+		cnt_en_i <= '1';  
+		wait for 30000 ms;
+		cnt_en_i <= '0';    -- stopwatch shutdown
+		wait for 5000 ms;
+		cnt_en_i <= '1';    -- stopwatch restart
+		wait for 5000 ms;
+		srst_n_i <= '0'; 	  -- stopwatch reset 
+		wait for 1000 ms;
+		srst_n_i <= '1'; 	  -- stopwatch end of reset 
+		
+		
 
 
       wait;

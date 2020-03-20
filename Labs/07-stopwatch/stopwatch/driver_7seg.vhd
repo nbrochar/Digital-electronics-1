@@ -46,8 +46,8 @@ begin
     --- WRITE YOUR CODE HERE
 	 CLOCK_ENABLE : entity work.clock_enable
 			generic map(
-				g_NPERIOD => x"0028"
-			)
+				g_NPERIOD => x"000A"  -- lowering the clock enable of the driver to 1ms in order to manage the stopwatch  
+			)								 -- updating each 10 ms
 			port map (
 				clk_i => clk_i,
 				srst_n_i => srst_n_i,			
