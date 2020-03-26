@@ -1,0 +1,3 @@
+work	"clock_enable.vhd"
+work	"top.vhd"
+work	"traffic.vhd"
