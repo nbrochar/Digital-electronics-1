@@ -30,42 +30,4 @@ and outputs:
 * `hth_h_o[3:0]` (counter for tenths of seconds)
 * `hth_l_o[3:0]` (counter for hundredths of seconds)
 
-
-## 3 Stopwatch simulation
-
-Design and simulate stopwatch counters in [EDA playground](https://www.edaplayground.com) or Xilinx ISE. Write a testbench that verifies all the functions of your stopwatch (reset, counting, enable(s)).
-
-Hint: Use the `numeric_std` package that defines the `unsigned` type and mathematical operations with that type (you will need the sum for the counter). Use the following conversion to associate the `unsigned` signal with the `std_logic_vector` output.
-
-```vhdl
-library ieee;
-use ieee.std_logic_1164.all;
-use ieee.numeric_std.all;
-
-entity stopwatch is
-port(
-    hth_l_o : out std_logic_vector(4-1 downto 0);
-...
-
-architecture Behavioral of stopwatch is
-    signal s_cnt0 : unsigned(4-1 downto 0) := (others => '0');
-    ...
-
-    s_cnt0 <= s_cnt0 + 1;
-    ...
-
-    hth_l_o <= std_logic_vector(s_cnt0);
-end architecture Behavioral;
-```
-
-Follow **programming conventions** and **coding style** from previous lab exercises.
-
-
-## 4 Top level
-
-Implement the top level in VHDL **or instead** draw a block diagram of used modules and name all input, output and internal signals.
-
-
-## Synchronize git
-
-Your repository must include README file, source code for the stopwatch, testbench code, screenshot of the correct simulation, and source code or schematic of top level implementation. Submit your solution **no later** than Friday.
+We decreased the clock enable signal to a period of 10 ms to have a better display since counter display is changing every 10 ms
