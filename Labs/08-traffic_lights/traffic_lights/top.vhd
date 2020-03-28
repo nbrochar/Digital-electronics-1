@@ -54,6 +54,8 @@ begin
 			generic map(
 				g_NPERIOD => x"0D05" -- dividing 10kHz clock by 3333 to obtain a 3 Hz clock 
 			)
+			-- we choose a frequency of 3Hz because counting until 3 makes 3 periods of 1/3s so 1 second
+			-- and counting until 15 makes 15 periods of 1/3s so 5 seconds
 			port map (
 				clk_i => clk_i,
 				srst_n_i => BTN0,			
@@ -62,10 +64,11 @@ begin
 			
 	 TRAFFIC : entity work.traffic
 			port map(
-				clk => s_3Hz_clock,
-            clr  => BTN0,	
-            lights(5 downto 3) => s_NS_lights,
-				lights(2 downto 0) => s_EW_lights
+				clk_i => clk_i,
+				ce_3Hz_i => s_3Hz_clock,
+            srst_n_i  => BTN0,	
+            lights_o(5 downto 3) => s_NS_lights,
+				lights_o(2 downto 0) => s_EW_lights
 			);
 end Behavioral;
 

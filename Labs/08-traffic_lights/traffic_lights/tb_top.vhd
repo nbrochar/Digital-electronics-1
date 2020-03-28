@@ -102,6 +102,10 @@ BEGIN
 
       -- insert stimulus here 
 		BTN0 <= '1';
+		wait for 12000 ms;
+		BTN0 <= '0';
+		wait for 1000 ms;
+		BTN0 <= '1';
 
       wait;
    end process;
