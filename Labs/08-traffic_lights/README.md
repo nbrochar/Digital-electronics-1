@@ -6,20 +6,16 @@ In this laboratory exercise you will implement a finite state machine, specifica
 
 [Video](https://youtu.be/P2emiQeBgE8)
 
-![traffic_lights_photo](traffic_lights_photo.jpg)
 
-
-## 1 Synchronize Git and create a new folder
-
-Synchronize the contents of your Digital-electronics-1 working directory with GitHub. and create a new folder `Labs/08-traffic_lights`.
-
-
-## 2 Finite State Machine (FSM)
+## Finite State Machine (FSM)
 
 Exemple of declaration of own data type (here state type) : type state_type is (G_R, Y_R, R_R1, R_G, R_Y, R_R2);
 
+State Diagram of this application :
 
-## 3 Traffic light controller
+![state_diagram_photo](State_Diagram_LAB8.png)
+
+## Traffic light controller
 
 We renamed signals G_R, Y_R, R_R1, R_G, R_Y, R_R2
 We used a counter from 1 to 3/15 to have 1s/5s with a clock enable signal of 3Hz
