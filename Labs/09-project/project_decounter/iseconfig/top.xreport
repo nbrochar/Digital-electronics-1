@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2020-04-26T15:29:57</DateModified>
+  <DateModified>2020-04-29T17:06:52</DateModified>
   <ModuleName>top</ModuleName>
-  <SummaryTimeStamp>2020-04-25T18:29:29</SummaryTimeStamp>
+  <SummaryTimeStamp>2020-04-29T16:38:19</SummaryTimeStamp>
   <SavedFilePath>/home/nico/Documents/VUT/Digital-electronics-1/Labs/09-project/project_decounter/iseconfig/top.xreport</SavedFilePath>
   <ImplementationReportsDirectory>/home/nico/Documents/VUT/Digital-electronics-1/Labs/09-project/project_decounter/</ImplementationReportsDirectory>
   <DateInitialized>2020-04-19T02:55:56</DateInitialized>

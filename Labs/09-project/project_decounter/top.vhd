@@ -32,9 +32,10 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity top is
     port (
         clk_i    				: in std_logic;
+        --- input/output below are set in coolrunner.ucf --
         BTN0  					: in std_logic;   -- Synchronous reset
         BTN1 				    : in std_logic;   -- start decount
-        PinSwitch_Encoder       : in std_logic;   -- change digit
+        PinSwitch_Encoder       : in std_logic;   -- change digit   
         PinA_Encoder 			: in std_logic; 			
         PinB_Encoder 			: in std_logic; 
          
@@ -42,6 +43,7 @@ entity top is
         LED1  					: out std_logic;
         LED2  					: out std_logic;
         LED3  					: out std_logic;
+        -----------------------------------------------
         disp_dp_o     		    : out std_logic;  -- Decimal point
         disp_seg_o    		    : out std_logic_vector(7-1 downto 0);
         disp_dig_o    		    : out std_logic_vector(4-1 downto 0)

@@ -31,6 +31,9 @@ use ieee.numeric_std.all;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
+
+
+-- this file manage the driving of the encoder and the countdown
 entity driver_encoder is
 	port(
 		clk_i 				: in std_logic;
@@ -59,10 +62,10 @@ architecture Behavioral of driver_encoder is
 	signal s_cnt3 : unsigned(4-1 downto 0) := (others => '0');
 	signal s_cnt_btn : unsigned(2-1 downto 0) := (others => '0'); -- signal counter used to change the digit selected with the button
     signal s_countdown_progress : std_logic := '0';    -- signal used by the system to know the countdown is in progress (active high) 
-	
 
 begin
 
+    -- Process to set the value and starting/processing the countdown --
     Digits_manager : process(clk_i)
     begin
         if rising_edge(clk_i) then
@@ -174,6 +177,7 @@ begin
         end if;
     end process;
 	
+    -- Process changing the state that correspond to the selected digit when the encoder button is pressed --
 	State_manager : process(clk_i)
     begin
 		if rising_edge(clk_i) then
@@ -195,58 +199,6 @@ begin
 				end case;
 		end if;
 	end process;
-	
-	
---	Decount : process (clk_i)
---    begin
---        if rising_edge(clk_i) then  -- Rising clock edge
---            if srst_n_i = '0' then  -- Synchronous reset (active low)
---                s_cnt0 <= (others => '0');  -- Clear all bits
---					 s_cnt1 <= (others => '0');  -- Clear all bits
---					 s_cnt2 <= (others => '0');  -- Clear all bits
---					 s_cnt3 <= (others => '0');  -- Clear all bits
---            elsif decount_start_i = '0' then
---					if ce_100Hz_i = '1' then 
---								
---						if s_cnt0 = 0 then 
---							s_cnt0 <= "1001";
---							if s_cnt1 > 0 then
---								s_cnt1 <= s_cnt1 - 1;
---							else
---								s_cnt1 <= "1001";
---							end if;
---						else 
---							s_cnt0 <= s_cnt0 - 1; -- Normal operation
---						end if;
---						
---						if (s_cnt1 = 0 and s_cnt0 = 0) then 
---							s_cnt1 <= "1001";
---							if s_cnt2 > 0 then
---								s_cnt2 <= s_cnt2 - 1;
---							else
---								s_cnt2 <= "1001";
---							end if;
---						end if;		
---						
---						if (s_cnt2 = 0 and s_cnt1 = 0 and s_cnt0 = 0) then 
---							s_cnt2 <= "1001";
---							if s_cnt3 > 0 then
---								s_cnt3 <= s_cnt3 - 1;
---							else
---								s_cnt3 <= "1001";
---							end if;
---						end if;
---						
---						if (s_cnt3 = 0 and s_cnt2 = 0 and s_cnt1 = 0 and s_cnt0 = 0) then 
---							s_cnt3 <= "0000";
---							s_cnt2 <= "0000";
---							s_cnt1 <= "0000";
---							s_cnt0 <= "0000";
---						end if;													
---					end if;		
---				end if;
---        end if;
---    end process Decount;
 
     -- update of the outputs according to the signals --
     sec_h_o <= std_logic_vector(s_cnt3);

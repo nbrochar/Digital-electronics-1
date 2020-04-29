@@ -57,9 +57,9 @@ NET disp_dp         LOC = P59;
 #-----------------------------------------------------------------------
 # GIO
 #-----------------------------------------------------------------------
-NET PinA_Encoder 			  LOC = P134;	
+NET PinA_Encoder 			  LOC = P134;	# setting location of pins of the encoder
 NET PinB_Encoder 			  LOC = P135;	
-NET PinSwitch_Encoder 	  LOC = P136;	
-NET PinA_Encoder PULLUP;
+NET PinSwitch_Encoder 	      LOC = P136;	
+NET PinA_Encoder PULLUP;                    # setting pull up on encoder pins
 NET PinB_Encoder PULLUP;
 NET PinSwitch_Encoder PULLUP;
