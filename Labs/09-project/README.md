@@ -81,6 +81,7 @@ This simulation screen shows that it's not possible to modify the values of the 
 ![sim_values_7segments](sim_values_7segments.png) 
 
 This screen shows that the 7segments is displaying correctly the values of the digits. The screen is showing the moment where the counter is at the value 49:22. At 5.960 s the driver is sending the dispay of the hundredths ("disp_dig_o" at "1110", '0' indicated the digit selected) and we can see that the value of "disp_seg_o" is "0010010" that corresponds to 2 as we can see on the schematic of a 7 segments below. The same for the tenths at 5.961 s because value is also 2. At 5.962 s the value of "disp_seg_o" is "0000100" that corresponds to 9 and "disp_dp_o" is at '0' that indicated the dot is displayed to separate the seconds from the hundredths. At 5.963 s the value of "disp_seg_o" is "1001100" that corresponds to 4. We can conclude that the 7 segments are correctly displaying the values of the counter. 
+
 ![7segments_leds](7segments_leds.png) 
 
 ### Synchronous reset
